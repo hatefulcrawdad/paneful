@@ -1,9 +1,7 @@
-#Paneful#
+#Paneful
 Painless off-canvas layouts with no JS
 
-=======
-
-To Do:
+###**To Do:**
 
 * Add left single option
 * Add right single option
