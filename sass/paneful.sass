@@ -7,28 +7,44 @@ html
 body
   min-height: 100%
 
+// Global .paneful styles
 .paneful
-  margin: 0
-  padding: 0
-  list-style: none
+  background: pink
+  width: 250px
+  min-height: 100%
   position: absolute
   top: 0
   left: 0
-  background: pink
-  width: 20%
-  overflow: hidden
-  margin-left: -20%
+  margin-left: -250px
   @include transition(margin-left 300ms)
 
+  // Resetting link styles
+  a
+    text-decoration: none
+
+// Overriding default list styles for when .paneful is on a list
+ul.paneful
+  margin-top: 0
+  margin-bottom: 0
+  padding: 0
+  list-style: none
+  overflow: hidden
+
+// Page wrap for non-pane content
 .paneful-page-wrap
   @include transition(margin-left 300ms)
 
-
+// Hiding the origin <input type="checkbox"> to use the <label> as the target
 .panefulToggle
+  position: absolute
+  top: -9999px
+  left: -9999px
+
+  // Using :checked as a way to get states for the panes
   &:checked
 
+    // Creates the page sliding trick
     + .paneful
       margin-left: 0
-
     ~ .paneful-page-wrap
-      margin-left: 20%
+      margin-left: 250px
