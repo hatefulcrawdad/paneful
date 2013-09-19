@@ -1,4 +1,4 @@
-paneful
+Paneful
 =======
 
-Off-canvas panels built with Sass
+Painless off-canvas layouts with no JS
