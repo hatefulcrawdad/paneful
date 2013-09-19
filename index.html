@@ -10,8 +10,16 @@
 </head>
 <body>
 
-  <input type="checkbox" class="panefulToggle" id="panefulMenu">
-  <ul class="paneful">
+  <input type="checkbox" class="paneful-toggle" id="panefulToggle_Left">
+  <ul class="paneful-left">
+    <li><a href="#">Blah</a></li>
+    <li><a href="#">Blah 2</a></li>
+    <li><a href="#">Blah 3</a></li>
+    <li><a href="#">Blah 4</a></li>
+  </ul>
+
+  <input type="checkbox" class="paneful-toggle" id="panefulToggle_Right">
+  <ul class="paneful-right">
     <li><a href="#">Blah</a></li>
     <li><a href="#">Blah 2</a></li>
     <li><a href="#">Blah 3</a></li>
@@ -20,9 +28,11 @@
 
   <div class="paneful-page-wrap">
     <!-- Paneful menu label -->
-    <label for="panefulMenu">Menu</label>
+    <label class="paneful-toggle-left" for="panefulToggle_Left">Left Menu</label>
+    <label class="paneful-toggle-right" for="panefulToggle_Right">Right Menu</label>
 
     <!-- Page content here -->
+    <h1>Hello World!</h1>
   </div>
 
 </body>

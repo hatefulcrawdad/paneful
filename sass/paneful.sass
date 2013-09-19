@@ -7,44 +7,80 @@ html
 body
   min-height: 100%
 
-// Global .paneful styles
-.paneful
+// Shareable styles for all paneful options
+%paneful
   background: pink
   width: 250px
   min-height: 100%
   position: absolute
-  top: 0
-  left: 0
-  margin-left: -250px
-  @include transition(margin-left 300ms)
-
-  // Resetting link styles
-  a
-    text-decoration: none
-
-// Overriding default list styles for when .paneful is on a list
-ul.paneful
   margin-top: 0
   margin-bottom: 0
   padding: 0
   list-style: none
   overflow: hidden
+  a
+    text-decoration: none
 
-// Page wrap for non-pane content
-.paneful-page-wrap
-  @include transition(margin-left 300ms)
+// Add cursor to label
+%add-cursor
+  cursor: pointer
+
+%transition
+  @include transition(margin 300ms)
 
 // Hiding the origin <input type="checkbox"> to use the <label> as the target
-.panefulToggle
+input.paneful-toggle
   position: absolute
   top: -9999px
   left: -9999px
 
-  // Using :checked as a way to get states for the panes
+  // Default Single left option
+  + .paneful-left
+    top: 0
+    left: 0
+    margin-left: -250px
+    @extend %paneful
+    @extend %transition
+    ~ .paneful-page-wrap
+      @extend %transition
+      .paneful-toggle-left
+        position: absolute
+        left: 0
+        top: 0
+        @extend %add-cursor
+        @extend %transition
+
+  // Default Single right option
+  + .paneful-right
+    top: 0
+    right: 0
+    margin-right: -250px
+    @extend %paneful
+    @extend %transition
+    ~ .paneful-page-wrap
+      @extend %transition
+      .paneful-toggle-right
+        position: absolute
+        right: 0
+        top: 0
+        @extend %add-cursor
+        @extend %transition
+
+  // When an input is checked it can provide "states" to style against
   &:checked
 
-    // Creates the page sliding trick
-    + .paneful
+    // Open single left option
+    + .paneful-left
       margin-left: 0
-    ~ .paneful-page-wrap
-      margin-left: 250px
+      ~ .paneful-page-wrap
+        margin-left: 250px
+        .paneful-toggle-left
+          margin-left: 250px
+
+    // Open single right option
+    + .paneful-right
+      margin-right: 0
+      ~ .paneful-page-wrap
+        margin-right: 250px
+        .paneful-toggle-right
+          margin-right: 250px
