@@ -1,6 +1,5 @@
 {
   "name": "Paneful",
-  "version": "0.1.1",
   "homepage": "https://github.com/hatefulcrawdad/paneful",
   "authors": [
     "Chris Michel <cm@chrismdesign.com>"
@@ -24,5 +23,15 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "_release": "6142cd6eec",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6142cd6eec56a73e6582e71b9bc6e7655467628f"
+  },
+  "_source": "git://github.com/hatefulcrawdad/paneful.git",
+  "_target": "*",
+  "_originalSource": "paneful",
+  "_direct": true
 }
