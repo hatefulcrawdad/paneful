@@ -1,11 +1,20 @@
-@import normalize
 @import compass/css3
+
+*
+  @include box-sizing(border-box)
 
 // Make sure <body> is always as tall as the window
 html
   height: 100%
 body
   min-height: 100%
+  overflow: hidden
+
+// Must put all main page contents inside this container
+%paneful-page-wrap
+  height: 100%
+  overflow: scroll
+  position: fixed
 
 // Shareable styles for all paneful options
 %paneful
@@ -74,13 +83,9 @@ input.paneful-toggle
       margin-left: 0
       ~ .paneful-page-wrap
         margin-left: 250px
-        .paneful-toggle-left
-          margin-left: 250px
 
     // Open single right option
     + .paneful-right
       margin-right: 0
       ~ .paneful-page-wrap
         margin-right: 250px
-        .paneful-toggle-right
-          margin-right: 250px

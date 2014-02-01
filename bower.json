@@ -1,0 +1,28 @@
+{
+  "name": "Paneful",
+  "version": "0.1.0",
+  "homepage": "https://github.com/hatefulcrawdad/paneful",
+  "authors": [
+    "Chris Michel <cm@chrismdesign.com>"
+  ],
+  "description": "Slide-in panels for holding navigation or content",
+  "main": [
+    "./sass/_paneful.sass",
+    "./sass/_normalize.sass"
+  ]
+  "keywords": [
+    "sass",
+    "compass",
+    "off-canvas",
+    "menu",
+    "panel"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
