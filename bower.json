@@ -8,8 +8,8 @@
   "description": "Slide-in panels for holding navigation or content",
   "main": [
     "./sass/_paneful.sass",
-    "./sass/_normalize.sass"
-  ]
+    "./sass/_normalize.scss"
+  ],
   "keywords": [
     "sass",
     "compass",
