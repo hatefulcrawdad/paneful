@@ -1,15 +1,28 @@
 #Paneful
 Painless off-canvas layouts with no JS
 
-###**To Do:**
+Still working on this project. It does currently work if you use the file structure below: 
 
-* **_Add left single option_**
-* **_Add right single option_**
-* Add top single option
-* Add bottom single option
-* Add tabs multi-panel option
-* Add iOS style multi-panel options with icons anchored to bottom
-* Add fixed sidebar multi-panel option with iconc anchored to the left
-* Add forward/backward multi-panel option with title in between
+```
+<!-- Left side menu -->
+<input type="checkbox" class="paneful-toggle" id="panefulToggle_Left">
+<ul class="paneful-left">
+  <li><a href="#">Menu Item</a></li>
+</ul>
 
-**_Bold Italics_** = First pass complete
+<!-- Right side menu -->
+<input type="checkbox" class="paneful-toggle" id="panefulToggle_Right">
+<ul class="paneful-right">
+  <li><a href="#">Blah</a></li>
+</ul>
+
+
+<div class="paneful-page-wrap">
+  <!-- Paneful menu labels -->
+  <label class="paneful-toggle-left" for="panefulToggle_Left">Left Menu</label>
+  <label class="paneful-toggle-right" for="panefulToggle_Right">Right Menu</label>
+
+  <!-- Page content here -->
+  
+</div>
+```
